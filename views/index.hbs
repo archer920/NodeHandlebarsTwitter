@@ -1,0 +1,40 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Node.Js & Handlebars & Twitter</h1>
+        <p>This is an example application that connects to Twitter</p>
+        <p>and returns tweets for a user name</p>
+    </div>
+</div>
+<form action="/" method="post" role="form" enctype="application/x-www-form-urlencoded">
+    <legend>Get Tweets For User</legend>
+
+    <div class="form-group">
+        <label for="user_name">Twitter User Name</label>
+        <input type="text" class="form-control" name="user_name" id="user_name">
+    </div>
+
+    <div class="form-group">
+        <label for="tweets">Number of Tweets</label>
+        <input type="number" class="form-control" name="tweets" id="tweets">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{#each tweets}}
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Tweet</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{timestamp}}</td>
+            <td>{{tweet}}</td>
+        </tr>
+        </tbody>
+    </table>
+{{/each}}

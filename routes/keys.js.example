@@ -1,0 +1,8 @@
+console.log('this is loaded');
+
+exports.twitterKeys = {
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '-IyY5MdR4NejyPcQoxYNkSAxwRqZpAQQKMJIwlcCrD',
+    access_token_secret: '',
+};
